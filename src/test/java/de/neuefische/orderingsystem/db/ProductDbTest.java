@@ -1,3 +1,7 @@
+package de.neuefische.orderingsystem.db;
+
+import de.neuefische.orderingsystem.db.ProductDb;
+import de.neuefische.orderingsystem.models.Product;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

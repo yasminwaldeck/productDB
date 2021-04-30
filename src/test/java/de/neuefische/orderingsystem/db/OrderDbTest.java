@@ -1,3 +1,8 @@
+package de.neuefische.orderingsystem.db;
+
+import de.neuefische.orderingsystem.db.OrderDb;
+import de.neuefische.orderingsystem.models.Order;
+import de.neuefische.orderingsystem.models.Product;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class OrderDbTest {
 
     @Test
-    @DisplayName("Test to get new Order")
+    @DisplayName("Test to get new de.neuefische.orderingsystem.models.Order")
     public void testAddAndGetOrder(){
         //GIVEN
         Product banana = new Product("42", "banana");

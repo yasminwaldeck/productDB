@@ -1,5 +1,7 @@
-import java.security.ProtectionDomain;
-import java.util.Collection;
+package de.neuefische.orderingsystem.db;
+
+import de.neuefische.orderingsystem.models.Product;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,8 +34,8 @@ public class ProductDb {
 
     }
     /*
-    public ProductDb(Collection<Product> products){
-        for(Product product: products){
+    public de.neuefische.orderingsystem.db.ProductDb(Collection<de.neuefische.orderingsystem.models.Product> products){
+        for(de.neuefische.orderingsystem.models.Product product: products){
             this.mapOfProducts.put(product.getId(), product);
         }
     }

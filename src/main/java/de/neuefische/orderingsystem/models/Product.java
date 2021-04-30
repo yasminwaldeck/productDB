@@ -1,3 +1,5 @@
+package de.neuefische.orderingsystem.models;
+
 import java.util.Objects;
 
 public class Product {
@@ -41,7 +43,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product " +
+        return "de.neuefische.orderingsystem.models.Product " +
                 "ID: " + id +
                 ", Name: " + name + "\n";
     }

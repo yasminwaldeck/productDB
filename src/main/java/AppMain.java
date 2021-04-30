@@ -1,3 +1,5 @@
+import de.neuefische.orderingsystem.db.ProductDb;
+
 public class AppMain {
 
     public static void main(String[] args) {

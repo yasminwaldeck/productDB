@@ -1,3 +1,5 @@
+package de.neuefische.orderingsystem.models;
+
 import java.util.ArrayList;
 
 public class Order {
