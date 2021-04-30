@@ -29,9 +29,16 @@ public class OrderDbTest {
         orderDb.add(order);
 
         //WHEN
-        Optional actual = orderDb.get("1");
+        Optional<Order> actual = orderDb.get("1");
+        String actualString = String.valueOf(actual);
+
+
+        String expected = "Optional[Order Number: 1" + "\n" +
+        "Products: [Product: banana, ID 42" + "\n" +
+                ", Product: watermelon, ID 10"+ "\n" +
+                    "]]";
 
         //THEN
-        assertEquals(actual, order);
+        assertEquals(expected, actualString);
     }
 }
