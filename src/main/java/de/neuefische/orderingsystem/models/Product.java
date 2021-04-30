@@ -43,8 +43,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "de.neuefische.orderingsystem.models.Product " +
-                "ID: " + id +
-                ", Name: " + name + "\n";
+        return "Product: " + name +
+                ", ID " + id + "\n";
     }
 }

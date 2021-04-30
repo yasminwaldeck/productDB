@@ -28,4 +28,9 @@ public class Order {
         this.products = products;
     }
 
+    @Override
+    public String toString() {
+        return "Order Number: " + id + '\n' +
+                "Products: " + products;
+    }
 }

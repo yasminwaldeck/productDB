@@ -2,6 +2,7 @@ package de.neuefische.orderingsystem.db;
 
 import de.neuefische.orderingsystem.models.Product;
 
+import java.rmi.NoSuchObjectException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,10 @@ public class ProductDb {
         return List.copyOf(this.mapOfProducts.values());
     }
 
-    public Product get(String keyId){
+    public Product get(String keyId) throws NoSuchObjectException{
+        if (!mapOfProducts.containsKey(keyId)){
+            throw new NoSuchObjectException("No product with this key");
+        }
         return mapOfProducts.get(keyId);
     }
 

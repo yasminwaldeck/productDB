@@ -7,6 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -28,7 +29,7 @@ public class OrderDbTest {
         orderDb.add(order);
 
         //WHEN
-        Order actual = orderDb.get("1");
+        Optional actual = orderDb.get("1");
 
         //THEN
         assertEquals(actual, order);

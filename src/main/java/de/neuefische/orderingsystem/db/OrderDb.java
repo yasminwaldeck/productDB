@@ -5,6 +5,7 @@ import de.neuefische.orderingsystem.models.Order;
 import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 public class OrderDb {
 
@@ -18,12 +19,16 @@ public class OrderDb {
         mapOfOrders.put(order.getId(), order);
     }
 
-    public Order get(String id){
-        return mapOfOrders.get(id);
+    public Optional<Order> get(String id){
+        return Optional.empty(mapOfOrders.get(id));
     }
 
     public List<Order> list() {
         return List.copyOf(this.mapOfOrders.values());
     }
 
+    @Override
+    public String toString() {
+        return mapOfOrders.toString();
+    }
 }

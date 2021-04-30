@@ -5,13 +5,15 @@ import de.neuefische.orderingsystem.models.Product;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.rmi.NoSuchObjectException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ProductDbTest {
 
     @Test
     @DisplayName("Test get right product")
-    public void testGetProductDb() {
+    public void testGetProductDb() throws NoSuchObjectException {
         //Given
         ProductDb productDb = new ProductDb();
         Product banana = new Product("42", "banana");
