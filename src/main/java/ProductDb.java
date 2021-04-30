@@ -48,5 +48,8 @@ public class ProductDb {
         return mapOfProducts.get(keyId);
     }
 
-
+    @Override
+    public String toString() {
+        return "Products in DB: " + mapOfProducts ;
+    }
 }
