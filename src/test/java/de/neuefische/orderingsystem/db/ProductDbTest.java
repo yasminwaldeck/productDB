@@ -1,6 +1,7 @@
 package de.neuefische.orderingsystem.db;
 
 import de.neuefische.orderingsystem.db.ProductDb;
+import de.neuefische.orderingsystem.models.Obst;
 import de.neuefische.orderingsystem.models.Product;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,8 +17,8 @@ public class ProductDbTest {
     public void testGetProductDb() throws NoSuchObjectException {
         //Given
         ProductDb productDb = new ProductDb();
-        Product banana = new Product("42", "banana");
-        Product expected = new Product("42", "banana");
+        Product banana = new Obst("42", "banana");
+        Product expected = new Obst("42", "banana");
         String keyID = "42";
 
         //When

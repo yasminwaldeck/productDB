@@ -2,48 +2,22 @@ package de.neuefische.orderingsystem.models;
 
 import java.util.Objects;
 
-public class Product {
+public interface Product {
 
-    private String id;
-    private String name;
+    public String getName();
 
-    public Product(String id, String name){
-        this.id = id;
-        this.name = name;
-    }
+    public void setName(String name);
 
-    public String getName() {
-        return name;
-    }
+    public String getId();
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    public void setId(String id);
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return Objects.equals(id, product.id);
-    }
+    public boolean equals(Object o);
 
     @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
+    public int hashCode();
 
     @Override
-    public String toString() {
-        return "Product: " + name +
-                ", ID " + id + "\n";
-    }
+    public String toString();
 }
