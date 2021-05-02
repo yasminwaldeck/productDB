@@ -2,12 +2,12 @@ package de.neuefische.orderingsystem.models;
 
 import java.util.Objects;
 
-public class Obst implements Product {
+public class Fruit implements Product {
 
     private String id;
     private String name;
 
-    public Obst(String id, String name){
+    public Fruit(String id, String name){
         this.id = id;
         this.name = name;
     }

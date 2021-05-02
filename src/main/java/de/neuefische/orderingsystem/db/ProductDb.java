@@ -1,6 +1,6 @@
 package de.neuefische.orderingsystem.db;
 
-import de.neuefische.orderingsystem.models.Obst;
+import de.neuefische.orderingsystem.models.Fruit;
 import de.neuefische.orderingsystem.models.Product;
 
 import java.rmi.NoSuchObjectException;
@@ -14,15 +14,15 @@ public class ProductDb {
 
 
     public ProductDb(){
-        Product banana = new Obst("42", "banana");
-        Product strawberry = new Obst("43", "strawberry");
-        Product apple = new Obst("17", "apple");
-        Product papaya = new Obst("12", "papaya");
-        Product kiwi = new Obst("13", "kiwi");
-        Product mango = new Obst("6", "mango");
-        Product coconut = new Obst("33", "coconut");
-        Product orange = new Obst("7", "orange");
-        Product watermelon = new Obst("10", "watermelon");
+        Product banana = new Fruit("42", "banana");
+        Product strawberry = new Fruit("43", "strawberry");
+        Product apple = new Fruit("17", "apple");
+        Product papaya = new Fruit("12", "papaya");
+        Product kiwi = new Fruit("13", "kiwi");
+        Product mango = new Fruit("6", "mango");
+        Product coconut = new Fruit("33", "coconut");
+        Product orange = new Fruit("7", "orange");
+        Product watermelon = new Fruit("10", "watermelon");
 
         mapOfProducts.put("42", banana);
         mapOfProducts.put("43", strawberry);

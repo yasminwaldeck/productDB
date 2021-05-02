@@ -1,7 +1,6 @@
 package de.neuefische.orderingsystem.db;
 
-import de.neuefische.orderingsystem.db.OrderDb;
-import de.neuefische.orderingsystem.models.Obst;
+import de.neuefische.orderingsystem.models.Fruit;
 import de.neuefische.orderingsystem.models.Order;
 import de.neuefische.orderingsystem.models.Product;
 import org.junit.jupiter.api.DisplayName;
@@ -18,8 +17,8 @@ public class OrderDbTest {
     @DisplayName("Test to get new de.neuefische.orderingsystem.models.Order")
     public void testAddAndGetOrder(){
         //GIVEN
-        Product banana = new Obst("42", "banana");
-        Product watermelon = new Obst("10", "watermelon");
+        Product banana = new Fruit("42", "banana");
+        Product watermelon = new Fruit("10", "watermelon");
 
         ArrayList<Product> yummiFruits = new ArrayList<>();
         yummiFruits.add(banana);
