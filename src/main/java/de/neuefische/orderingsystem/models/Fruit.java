@@ -44,7 +44,7 @@ public class Fruit implements Product {
     @Override
     public String toString() {
         return "Product: " + name +
-                ", ID " + id + "\n";
+                ", ID " + id + '\n';
     }
 
 
