@@ -50,7 +50,7 @@ public class ProductDb {
 
     public Product get(String keyId) throws NoSuchObjectException{
         if (!mapOfProducts.containsKey(keyId)){
-            throw new NoSuchObjectException("No product with this key");
+            throw new NoSuchObjectException("There is no product with the ID " + keyId + ". Order failed.");
         }
         return mapOfProducts.get(keyId);
     }
