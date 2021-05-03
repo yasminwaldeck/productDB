@@ -7,7 +7,12 @@ import org.junit.jupiter.api.Test;
 
 import java.rmi.NoSuchObjectException;
 
+import static org.hamcrest.core.Is.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 public class ProductDbTest {
 
@@ -25,6 +30,20 @@ public class ProductDbTest {
 
         //Then
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetException(){
+
+        ProductDb productDb = new ProductDb();
+
+        try{
+            Product actual = productDb.get("66");
+            fail();
+        } catch (Exception exception){
+            assertThat(exception.getClass(), is(NoSuchObjectException.class));
+        }
+
     }
 
 }

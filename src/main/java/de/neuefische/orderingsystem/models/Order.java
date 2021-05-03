@@ -1,15 +1,17 @@
 package de.neuefische.orderingsystem.models;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Order {
 
     private String id;
-    private ArrayList<Product> products;
+    private List<Product> products;
 
     public Order(String id, ArrayList<Product> products) {
         this.id = id;
-        this.products = products;
+        this.products = Collections.unmodifiableList(products);
     }
 
     public String getId() {
@@ -20,11 +22,11 @@ public class Order {
         this.id = id;
     }
 
-    public ArrayList<Product> getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(ArrayList<Product> products) {
+    public void setProducts(List<Product> products) {
         this.products = products;
     }
 

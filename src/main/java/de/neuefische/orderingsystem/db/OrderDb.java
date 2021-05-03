@@ -20,7 +20,7 @@ public class OrderDb {
     }
 
     public Optional<Order> get(String id){
-        return Optional.of(mapOfOrders.get(id));
+        return Optional.ofNullable(mapOfOrders.get(id));
     }
 
     public List<Order> list() {
